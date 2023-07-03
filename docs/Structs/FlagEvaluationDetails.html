@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FlagEvaluationDetails Structure Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Struct/FlagEvaluationDetails" class="dashAnchor"></a>
+    <a title="FlagEvaluationDetails Structure Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        FlagEvaluationDetails Structure Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MutableContext.html">MutableContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MutableStructure.html">MutableStructure</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MutableStructure/ConversionError.html">– ConversionError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenFeatureAPI.html">OpenFeatureAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenFeatureClient.html">OpenFeatureClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenFeatureClient/ClientMetadata.html">– ClientMetadata</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ErrorCode.html">ErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/FlagValueType.html">FlagValueType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OpenFeatureError.html">OpenFeatureError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Reason.html">Reason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Value.html">Value</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int64.html">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AllowedFlagValueType.html">AllowedFlagValueType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/BaseEvaluation.html">BaseEvaluation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Client.html">Client</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/EvaluationContext.html">EvaluationContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FeatureProvider.html">FeatureProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Features.html">Features</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Hook.html">Hook</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Metadata.html">Metadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Structure.html">Structure</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/FlagEvaluationDetails.html">FlagEvaluationDetails</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:11OpenFeature21FlagEvaluationOptionsV">FlagEvaluationOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:11OpenFeature11HookContextV">HookContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ProviderEvaluation.html">ProviderEvaluation</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>FlagEvaluationDetails</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">FlagEvaluationDetails</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/BaseEvaluation.html">BaseEvaluation</a></span><span class="p">,</span> <span class="kt">Equatable</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">Equatable</span></code></pre>
+
+                </div>
+              </div>
+            <p>Contains information about how the evaluation happened, including any resolved values.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature21FlagEvaluationDetailsV7flagKeySSvp"></a>
+                    <a name="//apple_ref/swift/Property/flagKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature21FlagEvaluationDetailsV7flagKeySSvp">flagKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">flagKey</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature21FlagEvaluationDetailsV5valuexvp"></a>
+                    <a name="//apple_ref/swift/Property/value" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature21FlagEvaluationDetailsV5valuexvp">value</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature21FlagEvaluationDetailsV7variantSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/variant" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature21FlagEvaluationDetailsV7variantSSSgvp">variant</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">variant</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature21FlagEvaluationDetailsV6reasonSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/reason" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature21FlagEvaluationDetailsV6reasonSSSgvp">reason</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">reason</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature21FlagEvaluationDetailsV9errorCodeAA05ErrorG0OSgvp"></a>
+                    <a name="//apple_ref/swift/Property/errorCode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature21FlagEvaluationDetailsV9errorCodeAA05ErrorG0OSgvp">errorCode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">errorCode</span><span class="p">:</span> <span class="kt"><a href="../Enums/ErrorCode.html">ErrorCode</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature21FlagEvaluationDetailsV12errorMessageSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/errorMessage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature21FlagEvaluationDetailsV12errorMessageSSSgvp">errorMessage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">errorMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature21FlagEvaluationDetailsV7flagKey5value7variant6reason9errorCode0K7MessageACyxGSS_xSSSgAkA05ErrorL0OSgAKtcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(flagKey:value:variant:reason:errorCode:errorMessage:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature21FlagEvaluationDetailsV7flagKey5value7variant6reason9errorCode0K7MessageACyxGSS_xSSSgAkA05ErrorL0OSgAKtcfc">init(flagKey:<wbr>value:<wbr>variant:<wbr>reason:<wbr>errorCode:<wbr>errorMessage:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
+    <span class="nv">flagKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+    <span class="nv">value</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span>
+    <span class="nv">variant</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">reason</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">errorCode</span><span class="p">:</span> <span class="kt"><a href="../Enums/ErrorCode.html">ErrorCode</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">errorMessage</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature21FlagEvaluationDetailsV4from12providerEval7flagKeyACyxGAA08ProviderD0VyxG_SStFZ"></a>
+                    <a name="//apple_ref/swift/Method/from(providerEval:flagKey:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature21FlagEvaluationDetailsV4from12providerEval7flagKeyACyxGAA08ProviderD0VyxG_SStFZ">from(providerEval:<wbr>flagKey:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">from</span><span class="p">(</span><span class="nv">providerEval</span><span class="p">:</span> <span class="kt"><a href="../Structs/ProviderEvaluation.html">ProviderEvaluation</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">flagKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">FlagEvaluationDetails</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2023 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2023-07-03)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

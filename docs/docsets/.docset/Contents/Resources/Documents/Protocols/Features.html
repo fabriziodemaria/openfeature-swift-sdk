@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Features Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/Features" class="dashAnchor"></a>
+    <a title="Features Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        Features Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MutableContext.html">MutableContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MutableStructure.html">MutableStructure</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MutableStructure/ConversionError.html">– ConversionError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenFeatureAPI.html">OpenFeatureAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenFeatureClient.html">OpenFeatureClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenFeatureClient/ClientMetadata.html">– ClientMetadata</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ErrorCode.html">ErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/FlagValueType.html">FlagValueType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OpenFeatureError.html">OpenFeatureError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Reason.html">Reason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Value.html">Value</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int64.html">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AllowedFlagValueType.html">AllowedFlagValueType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/BaseEvaluation.html">BaseEvaluation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Client.html">Client</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/EvaluationContext.html">EvaluationContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FeatureProvider.html">FeatureProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Features.html">Features</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Hook.html">Hook</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Metadata.html">Metadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Structure.html">Structure</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/FlagEvaluationDetails.html">FlagEvaluationDetails</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:11OpenFeature21FlagEvaluationOptionsV">FlagEvaluationOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:11OpenFeature11HookContextV">HookContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ProviderEvaluation.html">ProviderEvaluation</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Features</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Features</span></code></pre>
+
+                </div>
+              </div>
+            <p>An API for the type-specific fetch methods offered to users.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Generics"></a>
+                <a name="//apple_ref/swift/Section/Generics" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Generics"></a>
+                  <h3 class="section-name"><span>Generics</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP8getValue3key07defaultE0qd__SS_qd__tAA011AllowedFlagE4TypeRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/getValue(key:defaultValue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP8getValue3key07defaultE0qd__SS_qd__tAA011AllowedFlagE4TypeRd__lF">getValue(key:<wbr>defaultValue:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">getValue</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/AllowedFlagValueType.html">AllowedFlagValueType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP8getValue3key07defaultE07optionsqd__SS_qd__AA21FlagEvaluationOptionsVtAA07AllowediE4TypeRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/getValue(key:defaultValue:options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP8getValue3key07defaultE07optionsqd__SS_qd__AA21FlagEvaluationOptionsVtAA07AllowediE4TypeRd__lF">getValue(key:<wbr>defaultValue:<wbr>options:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">getValue</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AllowedFlagValueType.html">AllowedFlagValueType</a></span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Structs.html#/s:11OpenFeature21FlagEvaluationOptionsV">FlagEvaluationOptions</a></span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP10getDetails3key12defaultValueAA014FlagEvaluationE0Vyqd__GSS_qd__tAA07AllowediH4TypeRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/getDetails(key:defaultValue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP10getDetails3key12defaultValueAA014FlagEvaluationE0Vyqd__GSS_qd__tAA07AllowediH4TypeRd__lF">getDetails(key:<wbr>defaultValue:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">getDetails</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/FlagEvaluationDetails.html">FlagEvaluationDetails</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/AllowedFlagValueType.html">AllowedFlagValueType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP10getDetails3key12defaultValue7optionsAA014FlagEvaluationE0Vyqd__GSS_qd__AA0jK7OptionsVtAA07AllowedjH4TypeRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/getDetails(key:defaultValue:options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP10getDetails3key12defaultValue7optionsAA014FlagEvaluationE0Vyqd__GSS_qd__AA0jK7OptionsVtAA07AllowedjH4TypeRd__lF">getDetails(key:<wbr>defaultValue:<wbr>options:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">getDetails</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AllowedFlagValueType.html">AllowedFlagValueType</a></span><span class="o">&gt;</span><span class="p">(</span>
+    <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Structs.html#/s:11OpenFeature21FlagEvaluationOptionsV">FlagEvaluationOptions</a></span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/FlagEvaluationDetails.html">FlagEvaluationDetails</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Bool"></a>
+                <a name="//apple_ref/swift/Section/Bool" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Bool"></a>
+                  <h3 class="section-name"><span>Bool</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP15getBooleanValue3key07defaultF0SbSS_SbtF"></a>
+                    <a name="//apple_ref/swift/Method/getBooleanValue(key:defaultValue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP15getBooleanValue3key07defaultF0SbSS_SbtF">getBooleanValue(key:<wbr>defaultValue:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBooleanValue</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP15getBooleanValue3key07defaultF07optionsSbSS_SbAA21FlagEvaluationOptionsVtF"></a>
+                    <a name="//apple_ref/swift/Method/getBooleanValue(key:defaultValue:options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP15getBooleanValue3key07defaultF07optionsSbSS_SbAA21FlagEvaluationOptionsVtF">getBooleanValue(key:<wbr>defaultValue:<wbr>options:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBooleanValue</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Structs.html#/s:11OpenFeature21FlagEvaluationOptionsV">FlagEvaluationOptions</a></span><span class="p">)</span>
+    <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP17getBooleanDetails3key12defaultValueAA014FlagEvaluationF0VySbGSS_SbtF"></a>
+                    <a name="//apple_ref/swift/Method/getBooleanDetails(key:defaultValue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP17getBooleanDetails3key12defaultValueAA014FlagEvaluationF0VySbGSS_SbtF">getBooleanDetails(key:<wbr>defaultValue:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBooleanDetails</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/FlagEvaluationDetails.html">FlagEvaluationDetails</a></span><span class="o">&lt;</span><span class="kt">Bool</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP17getBooleanDetails3key12defaultValue7optionsAA014FlagEvaluationF0VySbGSS_SbAA0kL7OptionsVtF"></a>
+                    <a name="//apple_ref/swift/Method/getBooleanDetails(key:defaultValue:options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP17getBooleanDetails3key12defaultValue7optionsAA014FlagEvaluationF0VySbGSS_SbAA0kL7OptionsVtF">getBooleanDetails(key:<wbr>defaultValue:<wbr>options:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBooleanDetails</span><span class="p">(</span>
+    <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Structs.html#/s:11OpenFeature21FlagEvaluationOptionsV">FlagEvaluationOptions</a></span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/FlagEvaluationDetails.html">FlagEvaluationDetails</a></span><span class="o">&lt;</span><span class="kt">Bool</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/String"></a>
+                <a name="//apple_ref/swift/Section/String" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/String"></a>
+                  <h3 class="section-name"><span>String</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP14getStringValue3key07defaultF0S2S_SStF"></a>
+                    <a name="//apple_ref/swift/Method/getStringValue(key:defaultValue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP14getStringValue3key07defaultF0S2S_SStF">getStringValue(key:<wbr>defaultValue:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getStringValue</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP14getStringValue3key07defaultF07optionsS2S_SSAA21FlagEvaluationOptionsVtF"></a>
+                    <a name="//apple_ref/swift/Method/getStringValue(key:defaultValue:options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP14getStringValue3key07defaultF07optionsS2S_SSAA21FlagEvaluationOptionsVtF">getStringValue(key:<wbr>defaultValue:<wbr>options:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getStringValue</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Structs.html#/s:11OpenFeature21FlagEvaluationOptionsV">FlagEvaluationOptions</a></span><span class="p">)</span>
+    <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP16getStringDetails3key12defaultValueAA014FlagEvaluationF0VySSGSS_SStF"></a>
+                    <a name="//apple_ref/swift/Method/getStringDetails(key:defaultValue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP16getStringDetails3key12defaultValueAA014FlagEvaluationF0VySSGSS_SStF">getStringDetails(key:<wbr>defaultValue:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getStringDetails</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/FlagEvaluationDetails.html">FlagEvaluationDetails</a></span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP16getStringDetails3key12defaultValue7optionsAA014FlagEvaluationF0VySSGSS_SSAA0kL7OptionsVtF"></a>
+                    <a name="//apple_ref/swift/Method/getStringDetails(key:defaultValue:options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP16getStringDetails3key12defaultValue7optionsAA014FlagEvaluationF0VySSGSS_SSAA0kL7OptionsVtF">getStringDetails(key:<wbr>defaultValue:<wbr>options:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getStringDetails</span><span class="p">(</span>
+    <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Structs.html#/s:11OpenFeature21FlagEvaluationOptionsV">FlagEvaluationOptions</a></span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/FlagEvaluationDetails.html">FlagEvaluationDetails</a></span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Int"></a>
+                <a name="//apple_ref/swift/Section/Int" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Int"></a>
+                  <h3 class="section-name"><span>Int</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP15getIntegerValue3key07defaultF0s5Int64VSS_AHtF"></a>
+                    <a name="//apple_ref/swift/Method/getIntegerValue(key:defaultValue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP15getIntegerValue3key07defaultF0s5Int64VSS_AHtF">getIntegerValue(key:<wbr>defaultValue:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getIntegerValue</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int64</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP15getIntegerValue3key07defaultF07optionss5Int64VSS_AiA21FlagEvaluationOptionsVtF"></a>
+                    <a name="//apple_ref/swift/Method/getIntegerValue(key:defaultValue:options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP15getIntegerValue3key07defaultF07optionss5Int64VSS_AiA21FlagEvaluationOptionsVtF">getIntegerValue(key:<wbr>defaultValue:<wbr>options:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getIntegerValue</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Structs.html#/s:11OpenFeature21FlagEvaluationOptionsV">FlagEvaluationOptions</a></span><span class="p">)</span>
+    <span class="o">-&gt;</span> <span class="kt">Int64</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP17getIntegerDetails3key12defaultValueAA014FlagEvaluationF0Vys5Int64VGSS_AJtF"></a>
+                    <a name="//apple_ref/swift/Method/getIntegerDetails(key:defaultValue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP17getIntegerDetails3key12defaultValueAA014FlagEvaluationF0Vys5Int64VGSS_AJtF">getIntegerDetails(key:<wbr>defaultValue:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getIntegerDetails</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/FlagEvaluationDetails.html">FlagEvaluationDetails</a></span><span class="o">&lt;</span><span class="kt">Int64</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP17getIntegerDetails3key12defaultValue7optionsAA014FlagEvaluationF0Vys5Int64VGSS_AkA0kL7OptionsVtF"></a>
+                    <a name="//apple_ref/swift/Method/getIntegerDetails(key:defaultValue:options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP17getIntegerDetails3key12defaultValue7optionsAA014FlagEvaluationF0Vys5Int64VGSS_AkA0kL7OptionsVtF">getIntegerDetails(key:<wbr>defaultValue:<wbr>options:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getIntegerDetails</span><span class="p">(</span>
+    <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Structs.html#/s:11OpenFeature21FlagEvaluationOptionsV">FlagEvaluationOptions</a></span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/FlagEvaluationDetails.html">FlagEvaluationDetails</a></span><span class="o">&lt;</span><span class="kt">Int64</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Double"></a>
+                <a name="//apple_ref/swift/Section/Double" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Double"></a>
+                  <h3 class="section-name"><span>Double</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP14getDoubleValue3key07defaultF0SdSS_SdtF"></a>
+                    <a name="//apple_ref/swift/Method/getDoubleValue(key:defaultValue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP14getDoubleValue3key07defaultF0SdSS_SdtF">getDoubleValue(key:<wbr>defaultValue:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getDoubleValue</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP14getDoubleValue3key07defaultF07optionsSdSS_SdAA21FlagEvaluationOptionsVtF"></a>
+                    <a name="//apple_ref/swift/Method/getDoubleValue(key:defaultValue:options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP14getDoubleValue3key07defaultF07optionsSdSS_SdAA21FlagEvaluationOptionsVtF">getDoubleValue(key:<wbr>defaultValue:<wbr>options:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getDoubleValue</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Structs.html#/s:11OpenFeature21FlagEvaluationOptionsV">FlagEvaluationOptions</a></span><span class="p">)</span>
+    <span class="o">-&gt;</span> <span class="kt">Double</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP16getDoubleDetails3key12defaultValueAA014FlagEvaluationF0VySdGSS_SdtF"></a>
+                    <a name="//apple_ref/swift/Method/getDoubleDetails(key:defaultValue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP16getDoubleDetails3key12defaultValueAA014FlagEvaluationF0VySdGSS_SdtF">getDoubleDetails(key:<wbr>defaultValue:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getDoubleDetails</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/FlagEvaluationDetails.html">FlagEvaluationDetails</a></span><span class="o">&lt;</span><span class="kt">Double</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP16getDoubleDetails3key12defaultValue7optionsAA014FlagEvaluationF0VySdGSS_SdAA0kL7OptionsVtF"></a>
+                    <a name="//apple_ref/swift/Method/getDoubleDetails(key:defaultValue:options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP16getDoubleDetails3key12defaultValue7optionsAA014FlagEvaluationF0VySdGSS_SdAA0kL7OptionsVtF">getDoubleDetails(key:<wbr>defaultValue:<wbr>options:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getDoubleDetails</span><span class="p">(</span>
+    <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Structs.html#/s:11OpenFeature21FlagEvaluationOptionsV">FlagEvaluationOptions</a></span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/FlagEvaluationDetails.html">FlagEvaluationDetails</a></span><span class="o">&lt;</span><span class="kt">Double</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Object"></a>
+                <a name="//apple_ref/swift/Section/Object" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Object"></a>
+                  <h3 class="section-name"><span>Object</span>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP14getObjectValue3key07defaultF0AA0F0OSS_AHtF"></a>
+                    <a name="//apple_ref/swift/Method/getObjectValue(key:defaultValue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP14getObjectValue3key07defaultF0AA0F0OSS_AHtF">getObjectValue(key:<wbr>defaultValue:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getObjectValue</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt"><a href="../Enums/Value.html">Value</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/Value.html">Value</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP14getObjectValue3key07defaultF07optionsAA0F0OSS_AiA21FlagEvaluationOptionsVtF"></a>
+                    <a name="//apple_ref/swift/Method/getObjectValue(key:defaultValue:options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP14getObjectValue3key07defaultF07optionsAA0F0OSS_AiA21FlagEvaluationOptionsVtF">getObjectValue(key:<wbr>defaultValue:<wbr>options:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getObjectValue</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt"><a href="../Enums/Value.html">Value</a></span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Structs.html#/s:11OpenFeature21FlagEvaluationOptionsV">FlagEvaluationOptions</a></span><span class="p">)</span>
+    <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/Value.html">Value</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP16getObjectDetails3key12defaultValueAA014FlagEvaluationF0VyAA0I0OGSS_AJtF"></a>
+                    <a name="//apple_ref/swift/Method/getObjectDetails(key:defaultValue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP16getObjectDetails3key12defaultValueAA014FlagEvaluationF0VyAA0I0OGSS_AJtF">getObjectDetails(key:<wbr>defaultValue:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getObjectDetails</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt"><a href="../Enums/Value.html">Value</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/FlagEvaluationDetails.html">FlagEvaluationDetails</a></span><span class="o">&lt;</span><span class="kt"><a href="../Enums/Value.html">Value</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP16getObjectDetails3key12defaultValue7optionsAA014FlagEvaluationF0VyAA0I0OGSS_AkA0kL7OptionsVtF"></a>
+                    <a name="//apple_ref/swift/Method/getObjectDetails(key:defaultValue:options:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP16getObjectDetails3key12defaultValue7optionsAA014FlagEvaluationF0VyAA0I0OGSS_AkA0kL7OptionsVtF">getObjectDetails(key:<wbr>defaultValue:<wbr>options:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getObjectDetails</span><span class="p">(</span>
+    <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt"><a href="../Enums/Value.html">Value</a></span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Structs.html#/s:11OpenFeature21FlagEvaluationOptionsV">FlagEvaluationOptions</a></span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/FlagEvaluationDetails.html">FlagEvaluationDetails</a></span><span class="o">&lt;</span><span class="kt"><a href="../Enums/Value.html">Value</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2023 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2023-07-03)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

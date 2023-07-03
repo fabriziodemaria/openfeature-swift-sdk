@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>OpenFeatureAPI Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/OpenFeatureAPI" class="dashAnchor"></a>
+    <a title="OpenFeatureAPI Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        OpenFeatureAPI Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MutableContext.html">MutableContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MutableStructure.html">MutableStructure</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MutableStructure/ConversionError.html">– ConversionError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenFeatureAPI.html">OpenFeatureAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenFeatureClient.html">OpenFeatureClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenFeatureClient/ClientMetadata.html">– ClientMetadata</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ErrorCode.html">ErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/FlagValueType.html">FlagValueType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OpenFeatureError.html">OpenFeatureError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Reason.html">Reason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Value.html">Value</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int64.html">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AllowedFlagValueType.html">AllowedFlagValueType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/BaseEvaluation.html">BaseEvaluation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Client.html">Client</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/EvaluationContext.html">EvaluationContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FeatureProvider.html">FeatureProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Features.html">Features</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Hook.html">Hook</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Metadata.html">Metadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Structure.html">Structure</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/FlagEvaluationDetails.html">FlagEvaluationDetails</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:11OpenFeature21FlagEvaluationOptionsV">FlagEvaluationOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:11OpenFeature11HookContextV">HookContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ProviderEvaluation.html">ProviderEvaluation</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>OpenFeatureAPI</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">OpenFeatureAPI</span></code></pre>
+
+                </div>
+              </div>
+            <p>A global singleton which holds base configuration for the OpenFeature library.
+Configuration here will be shared across all <code><a href="../Protocols/Client.html">Client</a></code>s.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature0aB3APIC6sharedACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/shared" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature0aB3APIC6sharedACvpZ">shared</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code>OpenFeatureAPI</code> singleton</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">shared</span><span class="p">:</span> <span class="kt">OpenFeatureAPI</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature0aB3APICACycfc"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature0aB3APICACycfc">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature0aB3APIC11setProvider8provideryAA0bE0_p_tYaF"></a>
+                    <a name="//apple_ref/swift/Method/setProvider(provider:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature0aB3APIC11setProvider8provideryAA0bE0_p_tYaF">setProvider(provider:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Asynchronous
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setProvider</span><span class="p">(</span><span class="nv">provider</span><span class="p">:</span> <span class="kt"><a href="../Protocols/FeatureProvider.html">FeatureProvider</a></span><span class="p">)</span> <span class="k">async</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature0aB3APIC11setProvider8provider14initialContextyAA0bE0_p_AA010EvaluationH0_pSgtYaF"></a>
+                    <a name="//apple_ref/swift/Method/setProvider(provider:initialContext:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature0aB3APIC11setProvider8provider14initialContextyAA0bE0_p_AA010EvaluationH0_pSgtYaF">setProvider(provider:<wbr>initialContext:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Asynchronous
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setProvider</span><span class="p">(</span><span class="nv">provider</span><span class="p">:</span> <span class="kt"><a href="../Protocols/FeatureProvider.html">FeatureProvider</a></span><span class="p">,</span> <span class="nv">initialContext</span><span class="p">:</span> <span class="kt"><a href="../Protocols/EvaluationContext.html">EvaluationContext</a></span><span class="p">?)</span> <span class="k">async</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature0aB3APIC11getProviderAA0bE0_pSgyF"></a>
+                    <a name="//apple_ref/swift/Method/getProvider()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature0aB3APIC11getProviderAA0bE0_pSgyF">getProvider()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getProvider</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/FeatureProvider.html">FeatureProvider</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature0aB3APIC13clearProvideryyF"></a>
+                    <a name="//apple_ref/swift/Method/clearProvider()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature0aB3APIC13clearProvideryyF">clearProvider()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">clearProvider</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature0aB3APIC20setEvaluationContext010evaluationF0yAA0eF0_p_tYaF"></a>
+                    <a name="//apple_ref/swift/Method/setEvaluationContext(evaluationContext:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature0aB3APIC20setEvaluationContext010evaluationF0yAA0eF0_p_tYaF">setEvaluationContext(evaluationContext:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Asynchronous
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">setEvaluationContext</span><span class="p">(</span><span class="nv">evaluationContext</span><span class="p">:</span> <span class="kt"><a href="../Protocols/EvaluationContext.html">EvaluationContext</a></span><span class="p">)</span> <span class="k">async</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature0aB3APIC20getEvaluationContextAA0eF0_pSgyF"></a>
+                    <a name="//apple_ref/swift/Method/getEvaluationContext()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature0aB3APIC20getEvaluationContextAA0eF0_pSgyF">getEvaluationContext()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getEvaluationContext</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/EvaluationContext.html">EvaluationContext</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature0aB3APIC19getProviderMetadataAA0F0_pSgyF"></a>
+                    <a name="//apple_ref/swift/Method/getProviderMetadata()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature0aB3APIC19getProviderMetadataAA0F0_pSgyF">getProviderMetadata()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getProviderMetadata</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/Metadata.html">Metadata</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature0aB3APIC9getClientAA0E0_pyF"></a>
+                    <a name="//apple_ref/swift/Method/getClient()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature0aB3APIC9getClientAA0E0_pyF">getClient()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getClient</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/Client.html">Client</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature0aB3APIC9getClient4name7versionAA0E0_pSSSg_AHtF"></a>
+                    <a name="//apple_ref/swift/Method/getClient(name:version:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature0aB3APIC9getClient4name7versionAA0E0_pSSSg_AHtF">getClient(name:<wbr>version:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getClient</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">version</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/Client.html">Client</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature0aB3APIC8addHooks5hooksyAA4Hook_pd_tF"></a>
+                    <a name="//apple_ref/swift/Method/addHooks(hooks:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature0aB3APIC8addHooks5hooksyAA4Hook_pd_tF">addHooks(hooks:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addHooks</span><span class="p">(</span><span class="nv">hooks</span><span class="p">:</span> <span class="p">(</span><span class="n">any</span> <span class="kt"><a href="../Protocols/Hook.html">Hook</a></span><span class="p">)</span><span class="o">...</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature0aB3APIC10clearHooksyyF"></a>
+                    <a name="//apple_ref/swift/Method/clearHooks()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature0aB3APIC10clearHooksyyF">clearHooks()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">clearHooks</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2023 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2023-07-03)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

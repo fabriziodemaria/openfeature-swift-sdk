@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MutableStructure Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/MutableStructure" class="dashAnchor"></a>
+    <a title="MutableStructure Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        MutableStructure Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MutableContext.html">MutableContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MutableStructure.html">MutableStructure</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MutableStructure/ConversionError.html">– ConversionError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenFeatureAPI.html">OpenFeatureAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenFeatureClient.html">OpenFeatureClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenFeatureClient/ClientMetadata.html">– ClientMetadata</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ErrorCode.html">ErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/FlagValueType.html">FlagValueType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OpenFeatureError.html">OpenFeatureError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Reason.html">Reason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Value.html">Value</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int64.html">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AllowedFlagValueType.html">AllowedFlagValueType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/BaseEvaluation.html">BaseEvaluation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Client.html">Client</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/EvaluationContext.html">EvaluationContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FeatureProvider.html">FeatureProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Features.html">Features</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Hook.html">Hook</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Metadata.html">Metadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Structure.html">Structure</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/FlagEvaluationDetails.html">FlagEvaluationDetails</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:11OpenFeature21FlagEvaluationOptionsV">FlagEvaluationOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:11OpenFeature11HookContextV">HookContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ProviderEvaluation.html">ProviderEvaluation</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>MutableStructure</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">MutableStructure</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/Structure.html">Structure</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>The <code>MutableStructure</code> is a <code><a href="../Protocols/Structure.html">Structure</a></code> implementation which is not threadsafe, and whose attributes can
+be modified after instantiation.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature16MutableStructureC10attributesACSDySSAA5ValueOG_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(attributes:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature16MutableStructureC10attributesACSDySSAA5ValueOG_tcfc">init(attributes:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">attributes</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="../Enums/Value.html">Value</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[:])</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature16MutableStructureC6keySetShySSGyF"></a>
+                    <a name="//apple_ref/swift/Method/keySet()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature16MutableStructureC6keySetShySSGyF">keySet()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">keySet</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Set</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature16MutableStructureC8getValue3keyAA0F0OSgSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/getValue(key:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature16MutableStructureC8getValue3keyAA0F0OSgSS_tF">getValue(key:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">getValue</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/Value.html">Value</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature16MutableStructureC5asMapSDySSAA5ValueOGyF"></a>
+                    <a name="//apple_ref/swift/Method/asMap()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature16MutableStructureC5asMapSDySSAA5ValueOGyF">asMap()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">asMap</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="../Enums/Value.html">Value</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature16MutableStructureC11asObjectMapSDySSs11AnyHashableVSgGyF"></a>
+                    <a name="//apple_ref/swift/Method/asObjectMap()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature16MutableStructureC11asObjectMapSDySSs11AnyHashableVSgGyF">asObjectMap()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">asObjectMap</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">AnyHashable</span><span class="p">?]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature16MutableStructureC15ConversionErrorO"></a>
+                    <a name="//apple_ref/swift/Enum/ConversionError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature16MutableStructureC15ConversionErrorO">ConversionError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="../Classes/MutableStructure/ConversionError.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ConversionError</span> <span class="p">:</span> <span class="kt">Error</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature16MutableStructureC3add3key5valueACSS_AA5ValueOtF"></a>
+                    <a name="//apple_ref/swift/Method/add(key:value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature16MutableStructureC3add3key5valueACSS_AA5ValueOtF">add(key:<wbr>value:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">value</span><span class="p">:</span> <span class="kt"><a href="../Enums/Value.html">Value</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">MutableStructure</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2023 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2023-07-03)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

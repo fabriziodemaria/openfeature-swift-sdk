@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Protocols  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Section/Protocols" class="dashAnchor"></a>
+    <a title="Protocols  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (100% documented)</p>
+        <div class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" alt=""/>
+        Protocols  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/MutableContext.html">MutableContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MutableStructure.html">MutableStructure</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/MutableStructure/ConversionError.html">– ConversionError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OpenFeatureAPI.html">OpenFeatureAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OpenFeatureClient.html">OpenFeatureClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/OpenFeatureClient/ClientMetadata.html">– ClientMetadata</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/ErrorCode.html">ErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/FlagValueType.html">FlagValueType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/OpenFeatureError.html">OpenFeatureError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/Reason.html">Reason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/Value.html">Value</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Int64.html">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/AllowedFlagValueType.html">AllowedFlagValueType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/BaseEvaluation.html">BaseEvaluation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Client.html">Client</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/EvaluationContext.html">EvaluationContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/FeatureProvider.html">FeatureProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Features.html">Features</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Hook.html">Hook</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Metadata.html">Metadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/Structure.html">Structure</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs/FlagEvaluationDetails.html">FlagEvaluationDetails</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:11OpenFeature21FlagEvaluationOptionsV">FlagEvaluationOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:11OpenFeature11HookContextV">HookContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/ProviderEvaluation.html">ProviderEvaluation</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Protocols</h1>
+            <p>The following protocols are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature14BaseEvaluationP"></a>
+                    <a name="//apple_ref/swift/Protocol/BaseEvaluation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature14BaseEvaluationP">BaseEvaluation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This is a common interface between the evaluation results that providers return and what is given to the end users.
+<code>ValueType</code> is the type of flag being evaluated.</p>
+
+                        <a href="Protocols/BaseEvaluation.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">BaseEvaluation</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature6ClientP"></a>
+                    <a name="//apple_ref/swift/Protocol/Client" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature6ClientP">Client</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Interface used to resolve flags of varying types.</p>
+
+                        <a href="Protocols/Client.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Client</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Features.html">Features</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature17EvaluationContextP"></a>
+                    <a name="//apple_ref/swift/Protocol/EvaluationContext" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature17EvaluationContextP">EvaluationContext</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Container for arbitrary contextual data that can be used as a basis for dynamic evaluation.</p>
+
+                        <a href="Protocols/EvaluationContext.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">EvaluationContext</span> <span class="p">:</span> <span class="kt"><a href="Protocols/Structure.html">Structure</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature0B8ProviderP"></a>
+                    <a name="//apple_ref/swift/Protocol/FeatureProvider" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature0B8ProviderP">FeatureProvider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The interface implemented by upstream flag providers to resolve flags for their service.</p>
+
+                        <a href="Protocols/FeatureProvider.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FeatureProvider</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8FeaturesP"></a>
+                    <a name="//apple_ref/swift/Protocol/Features" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8FeaturesP">Features</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An API for the type-specific fetch methods offered to users.</p>
+
+                        <a href="Protocols/Features.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Features</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature20AllowedFlagValueTypeP"></a>
+                    <a name="//apple_ref/swift/Protocol/AllowedFlagValueType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature20AllowedFlagValueTypeP">AllowedFlagValueType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Protocols/AllowedFlagValueType.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">AllowedFlagValueType</span> <span class="p">:</span> <span class="kt">Equatable</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature4HookP"></a>
+                    <a name="//apple_ref/swift/Protocol/Hook" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature4HookP">Hook</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An extension point which can run around flag resolution.
+They are intended to be used as a way to add custom logic to the lifecycle of flag evaluation.</p>
+
+                        <a href="Protocols/Hook.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Hook</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature8MetadataP"></a>
+                    <a name="//apple_ref/swift/Protocol/Metadata" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature8MetadataP">Metadata</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                        <a href="Protocols/Metadata.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Metadata</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature9StructureP"></a>
+                    <a name="//apple_ref/swift/Protocol/Structure" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature9StructureP">Structure</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Represents a potentially nested object type which is used to represent
+structured data.</p>
+
+                        <a href="Protocols/Structure.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Structure</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2023 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2023-07-03)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>

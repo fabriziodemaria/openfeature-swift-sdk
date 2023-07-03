@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FeatureProvider Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/FeatureProvider" class="dashAnchor"></a>
+    <a title="FeatureProvider Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html"> Docs</a> (100% documented)</p>
+        <div class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html"> Reference</a>
+        <img id="carat" src="../img/carat.png" alt=""/>
+        FeatureProvider Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/MutableContext.html">MutableContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MutableStructure.html">MutableStructure</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MutableStructure/ConversionError.html">– ConversionError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenFeatureAPI.html">OpenFeatureAPI</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenFeatureClient.html">OpenFeatureClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/OpenFeatureClient/ClientMetadata.html">– ClientMetadata</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ErrorCode.html">ErrorCode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/FlagValueType.html">FlagValueType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OpenFeatureError.html">OpenFeatureError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Reason.html">Reason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Value.html">Value</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Bool.html">Bool</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Double.html">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Int64.html">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/AllowedFlagValueType.html">AllowedFlagValueType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/BaseEvaluation.html">BaseEvaluation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Client.html">Client</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/EvaluationContext.html">EvaluationContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/FeatureProvider.html">FeatureProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Features.html">Features</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Hook.html">Hook</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Metadata.html">Metadata</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Structure.html">Structure</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/FlagEvaluationDetails.html">FlagEvaluationDetails</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:11OpenFeature21FlagEvaluationOptionsV">FlagEvaluationOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:11OpenFeature11HookContextV">HookContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ProviderEvaluation.html">ProviderEvaluation</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>FeatureProvider</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">FeatureProvider</span></code></pre>
+
+                </div>
+              </div>
+            <p>The interface implemented by upstream flag providers to resolve flags for their service.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature0B8ProviderP5hooksSayAA4Hook_pGvp"></a>
+                    <a name="//apple_ref/swift/Property/hooks" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature0B8ProviderP5hooksSayAA4Hook_pGvp">hooks</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">hooks</span><span class="p">:</span> <span class="p">[</span><span class="n">any</span> <span class="kt"><a href="../Protocols/Hook.html">Hook</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature0B8ProviderP8metadataAA8Metadata_pvp"></a>
+                    <a name="//apple_ref/swift/Property/metadata" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature0B8ProviderP8metadataAA8Metadata_pvp">metadata</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">metadata</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Metadata.html">Metadata</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature0B8ProviderP10initialize14initialContextyAA010EvaluationF0_pSg_tYaF"></a>
+                    <a name="//apple_ref/swift/Method/initialize(initialContext:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature0B8ProviderP10initialize14initialContextyAA010EvaluationF0_pSg_tYaF">initialize(initialContext:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Asynchronous
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called by OpenFeatureAPI whenever the new Provider is registered</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">initialize</span><span class="p">(</span><span class="nv">initialContext</span><span class="p">:</span> <span class="kt"><a href="../Protocols/EvaluationContext.html">EvaluationContext</a></span><span class="p">?)</span> <span class="k">async</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature0B8ProviderP12onContextSet03oldE003newE0yAA010EvaluationE0_pSg_AaG_ptYaF"></a>
+                    <a name="//apple_ref/swift/Method/onContextSet(oldContext:newContext:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature0B8ProviderP12onContextSet03oldE003newE0yAA010EvaluationE0_pSg_AaG_ptYaF">onContextSet(oldContext:<wbr>newContext:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Asynchronous
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Called by OpenFeatureAPI whenever a new EvaluationContext is set by the application</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">onContextSet</span><span class="p">(</span><span class="nv">oldContext</span><span class="p">:</span> <span class="kt"><a href="../Protocols/EvaluationContext.html">EvaluationContext</a></span><span class="p">?,</span> <span class="nv">newContext</span><span class="p">:</span> <span class="kt"><a href="../Protocols/EvaluationContext.html">EvaluationContext</a></span><span class="p">)</span> <span class="k">async</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature0B8ProviderP20getBooleanEvaluation3key12defaultValue7contextAA0cF0VySbGSS_SbAA0F7Context_pSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/getBooleanEvaluation(key:defaultValue:context:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature0B8ProviderP20getBooleanEvaluation3key12defaultValue7contextAA0cF0VySbGSS_SbAA0F7Context_pSgtKF">getBooleanEvaluation(key:<wbr>defaultValue:<wbr>context:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getBooleanEvaluation</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">context</span><span class="p">:</span> <span class="kt"><a href="../Protocols/EvaluationContext.html">EvaluationContext</a></span><span class="p">?)</span> <span class="k">throws</span>
+    <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ProviderEvaluation.html">ProviderEvaluation</a></span><span class="o">&lt;</span>
+        <span class="kt">Bool</span>
+    <span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature0B8ProviderP19getStringEvaluation3key12defaultValue7contextAA0cF0VySSGSS_SSAA0F7Context_pSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/getStringEvaluation(key:defaultValue:context:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature0B8ProviderP19getStringEvaluation3key12defaultValue7contextAA0cF0VySSGSS_SSAA0F7Context_pSgtKF">getStringEvaluation(key:<wbr>defaultValue:<wbr>context:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getStringEvaluation</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">context</span><span class="p">:</span> <span class="kt"><a href="../Protocols/EvaluationContext.html">EvaluationContext</a></span><span class="p">?)</span> <span class="k">throws</span>
+    <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ProviderEvaluation.html">ProviderEvaluation</a></span><span class="o">&lt;</span>
+        <span class="kt">String</span>
+    <span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature0B8ProviderP20getIntegerEvaluation3key12defaultValue7contextAA0cF0Vys5Int64VGSS_AkA0F7Context_pSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/getIntegerEvaluation(key:defaultValue:context:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature0B8ProviderP20getIntegerEvaluation3key12defaultValue7contextAA0cF0Vys5Int64VGSS_AkA0F7Context_pSgtKF">getIntegerEvaluation(key:<wbr>defaultValue:<wbr>context:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getIntegerEvaluation</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span> <span class="nv">context</span><span class="p">:</span> <span class="kt"><a href="../Protocols/EvaluationContext.html">EvaluationContext</a></span><span class="p">?)</span> <span class="k">throws</span>
+    <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ProviderEvaluation.html">ProviderEvaluation</a></span><span class="o">&lt;</span>
+        <span class="kt">Int64</span>
+    <span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature0B8ProviderP19getDoubleEvaluation3key12defaultValue7contextAA0cF0VySdGSS_SdAA0F7Context_pSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/getDoubleEvaluation(key:defaultValue:context:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature0B8ProviderP19getDoubleEvaluation3key12defaultValue7contextAA0cF0VySdGSS_SdAA0F7Context_pSgtKF">getDoubleEvaluation(key:<wbr>defaultValue:<wbr>context:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getDoubleEvaluation</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span> <span class="nv">context</span><span class="p">:</span> <span class="kt"><a href="../Protocols/EvaluationContext.html">EvaluationContext</a></span><span class="p">?)</span> <span class="k">throws</span>
+    <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ProviderEvaluation.html">ProviderEvaluation</a></span><span class="o">&lt;</span>
+        <span class="kt">Double</span>
+    <span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:11OpenFeature0B8ProviderP19getObjectEvaluation3key12defaultValue7contextAA0cF0VyAA0I0OGSS_AkA0F7Context_pSgtKF"></a>
+                    <a name="//apple_ref/swift/Method/getObjectEvaluation(key:defaultValue:context:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:11OpenFeature0B8ProviderP19getObjectEvaluation3key12defaultValue7contextAA0cF0VyAA0I0OGSS_AkA0F7Context_pSgtKF">getObjectEvaluation(key:<wbr>defaultValue:<wbr>context:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">getObjectEvaluation</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">defaultValue</span><span class="p">:</span> <span class="kt"><a href="../Enums/Value.html">Value</a></span><span class="p">,</span> <span class="nv">context</span><span class="p">:</span> <span class="kt"><a href="../Protocols/EvaluationContext.html">EvaluationContext</a></span><span class="p">?)</span> <span class="k">throws</span>
+    <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/ProviderEvaluation.html">ProviderEvaluation</a></span><span class="o">&lt;</span>
+        <span class="kt"><a href="../Enums/Value.html">Value</a></span>
+    <span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2023 <a class="link" href="" target="_blank" rel="external noopener"></a>. All rights reserved. (Last updated: 2023-07-03)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</html>
